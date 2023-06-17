@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="personal blog">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="b1ack0p">
+
+    <title>My personal blog</title>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+	
+<body>
+
+  	<div class="flex-nav">
+  	
+  	<header>
+	 
+	  <nav>
+		<ul class="nav-listing">
+		  <li class="nav-listing">
+		    <a class="nav" href="../index.html"><--</a>
+		    <a class="nav" href="../index.html">Home</a>
+		    <a class="nav" href="#">Posts</a>
+		    <a class="nav" href="#">About</a>
+		  </li>
+		</ul>
+	  </nav>
+	
+	</header>
+	
+	</div>
+	
+	<div class="flex-main">
+	
+	<main>
+	
+	<article>
+	
+	<h2>Automatic wallpaper rotator</h2>
+	
+	<date>16-04-2023</date>
+	
+	</br></br></br>
+
+<p>Automatic desktop wallpaper rotator from specific picture path(s) for LXDE.</p>
+
+<p>script looks for defined image file extensions from multiple directories and sub-directories.</p>
+
+<pre class="input">
+#!/usr/bin/env bash
+
+shopt -s extglob nullglob globstar
+
+# Set the directories to pick images from, separated by spaces
+dirs=(
+  /path/to/images/1
+  /path/to/images/2
+  /path/to/images/3
+)
+
+# Set the image file extensions to look for
+extensions=("jpg" "jpeg" "png" "bmp")
+
+# Set the minimum resolution limit (HEIGHT in pixels)
+# Set to -1 to disable.
+min_resolution="1050"
+
+# Set the time to change the wallpaper (in seconds)
+time_interval="600"
+
+# Set wallpaper mode
+# LXDE PCManFM wallpaper modes:
+# 1. stretch: Stretch to fill the entire monitor area
+# 2. fit: Stretch to fit the monitor area
+# 3. center: Center unscaled image on the monitor
+# 4. tile: Tile the image to fill the entire monitor area
+# 5. crop: Stretch and crop to fill the monitor area
+# 6. screen: Stretch to fill complete screen
+wallpaper_mode="fit"
+
+# Define the path to the file containing the eligible images
+eligible_images_file="$HOME/.local/bin/wallpaper-eligible-images.txt"
+
+# Define log file path
+log_file="$HOME/.local/bin/wallpaper-rotator.log"
+
+# Define parser log file path
+parser_log_file="$HOME/.local/bin/wallpaper-image-parser.log"
+
+# Check if the file exists and load it if it does
+if [[ -f "$eligible_images_file" ]]; then
+  echo "Loading eligible images from file: $eligible_images_file"
+  readarray -t images < "$eligible_images_file"
+else
+  # Get the list of images with the specified extensions in the specified directories (including subdirectories)
+  images=()
+  for dir in "${dirs[@]}"; do
+    for ext in "${extensions[@]}"; do
+      # Use 'identify' command from ImageMagick to get the resolution of the image
+      for image in "$dir"/**/*."$ext"; do
+        if [[ $min_resolution == -1 ]]; then
+          images+=("$image")
+        else
+          resolution=$(identify -format '%wx%h' "$image")
+          width=$(echo "$resolution" | cut -d 'x' -f 1)
+          height=$(echo "$resolution" | cut -d 'x' -f 2)
+          if (( height >= min_resolution )); then
+            echo "[$(date +'%Y-%m-%d %r UTC %Z')]" "Image $image has resolution of ${width}x${height} pixels, meets the minimum height required ($min_resolution pixels), adding to the list!" | tee -a $parser_log_file
+            images+=("$image")
+          else
+            echo "[$(date +'%Y-%m-%d %r UTC %Z')]" "Image $image has resolution of ${width}x${height} pixels, does not meet the minimum height required ($min_resolution pixels), skipping..." | tee -a $parser_log_file
+          fi
+        fi
+      done
+    done
+  done
+
+  # Save the eligible images to file
+  echo "Saving eligible images to file: $eligible_images_file"
+  printf '%s\n' "${images[@]}" > "$eligible_images_file"
+fi
+
+while timeout 1 xwininfo -root -size >/dev/null 2>&1; do
+  # Count the number of images
+  n=${#images[@]}
+
+  # Select a random image and loop
+  if (( n > 0 )); then
+    rand=$(( RANDOM % n ))
+    wallpaper=${images[rand]}
+    
+    # Get the aspect ratio of the selected image by using 'identify' command from ImageMagick
+    image_aspect=$(identify -format "%[fx:w/h]" "$wallpaper")
+
+    # Print the total image count and selected wallpaper with date and time
+    printf '[%s] [Total image count: %d] Using image as wallpaper: %s [Resolution: %s, Aspect Ratio: %s, Wallpaper Mode: %s]\n' "$(date +'%Y-%m-%d %r UTC %Z')" "$n" "$wallpaper" "$(identify -format '%wx%h' "$wallpaper")" "$image_aspect" "$wallpaper_mode" | tee -a $log_file
+
+    # Set the wallpaper
+    pcmanfm --set-wallpaper="$wallpaper" --wallpaper-mode="$wallpaper_mode"
+  fi
+
+  # Wait before changing the wallpaper again
+  sleep $time_interval
+done
+</pre>
+
+<p>copy <code class="input">wallpaper-rotator.sh</code> and <code class="input">services.sh</code> anywhere you wish (by default paths inside .service file set to <code class="input">~/.local/bin/</code>)
+make dirs "systemd" and "user" as <code class="input">~/.config/systemd/user</code> then copy <code class="input">wallpaper-rotator.service</code> file in there.
+</pre>
+
+<p>then make both .sh scripts executable with <code class="input">chmod +x wallpaper-rotator.sh</code> and <code class="input">chmod +x services.sh</code> then add <code class="input">@/home/$user/.local/bin/services.sh</code> in <code class="input">/home/$user/.config/lxsession/LXDE/autostart</code> to autostart the script.</p>
+
+<p>run <code class="input">systemctl --user start/stop/restart/status wallpaper-rotator.service</code> to start/stop/restart and check status of the service.</p>
+
+<pre class="note">* script requires "ImageMagick" to be installed to get correct resolution and aspect ratio information of the wallpaper images. so make sure you have it installed or you can install by "sudo apt install imagemagick"</pre>
+	
+<p>Github link: <a href="https://github.com/b1ack0p/wallpaper-rotator">https://github.com/b1ack0p/wallpaper-rotator</a></p>
+
+	</article>
+
+	</main>
+	
+	</div>
+	
+	<div class="flex-footer">
+	
+	 <footer>
+
+	<p>2023 (c) MinimumAttic410</p>
+	<p>Github: <a href="https://github.com/minimumattic410/">https://github.com/minimumattic410/</a></p>
+	<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+	<p><a href="https://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="https://jigsaw.w3.org/css-validator/images/vcss"alt="Valid CSS!" /></a></p>
+
+	</footer>
+	
+	</div>
+	
+    </body>
+
+</html>

@@ -1,0 +1,585 @@
+/* fonts */
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('/fonts/DejaVuSans.woff2') format('woff2'),
+        url('/fonts/DejaVuSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/fonts/DejaVuSansMono.woff2') format('woff2'),
+        url('/fonts/DejaVuSansMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* #################################### */
+
+body {
+	background: #fff;
+	}
+
+table {
+    font-family: 'Dejavu Sans Mono';
+    border-collapse: collapse;
+    border: 1px solid rgb(0,0,0);
+    font-size: 0.8rem;
+    margin: 0 0 40px 20px;
+}
+
+td, th {
+	border: 1px solid rgb(0,0,0);
+	padding: 10px 20px;
+}
+
+td {
+    text-align: center;
+}
+
+.border {	
+	border-width: 1px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	border-top-style: dashed;
+	border-bottom-style: double;
+}
+
+/* Default (White on Black) colors */
+td.defaultBackground {background: #000000;color: #fff;}
+td.defaultForeground {background: #ffffff;color: #000;}
+td.defaultColor0 {background: #000000;color: #fff;}
+td.defaultColor1 {background: #800000;color: #fff;}
+td.defaultColor2 {background: #008000;color: #fff;}
+td.defaultColor3 {background: #808000;color: #fff;}
+td.defaultColor4 {background: #000080;color: #fff;}
+td.defaultColor5 {background: #800080;color: #fff;}
+td.defaultColor6 {background: #008080;color: #fff;}
+td.defaultColor7 {background: #c0c0c0;color: #000;}
+td.defaultColor8 {background: #808080;color: #fff;}
+td.defaultColor9 {background: #ff0000;color: #fff;}
+td.defaultColor10 {background: #00ff00;color: #000;}
+td.defaultColor11 {background: #ffff00;color: #000;}
+td.defaultColor12 {background: #0000ff;color: #fff;}
+td.defaultColor13 {background: #ff00ff;color: #000;}
+td.defaultColor14 {background: #00ffff;color: #000;}
+td.defaultColor15 {background: #ffffff;color: #000;}
+
+/* VGA colors */
+td.vgaBackground {background: #000000;color: #fff;}
+td.vgaForeground {background: #aaaaaa;color: #000;}
+td.vgaColor0 {background: #000000;color: #fff;}
+td.vgaColor1 {background: #aa0000;color: #fff;}
+td.vgaColor2 {background: #00aa00;color: #fff;}
+td.vgaColor3 {background: #aa5500;color: #fff;}
+td.vgaColor4 {background: #0000aa;color: #fff;}
+td.vgaColor5 {background: #aa00aa;color: #fff;}
+td.vgaColor6 {background: #00aaaa;color: #fff;}
+td.vgaColor7 {background: #aaaaaa;color: #000;}
+td.vgaColor8 {background: #555555;color: #fff;}
+td.vgaColor9 {background: #ff5555;color: #fff;}
+td.vgaColor10 {background: #55ff55;color: #000;}
+td.vgaColor11 {background: #ffff55;color: #000;}
+td.vgaColor12 {background: #5555ff;color: #fff;}
+td.vgaColor13 {background: #ff55ff;color: #000;}
+td.vgaColor14 {background: #55ffff;color: #000;}
+td.vgaColor15 {background: #ffffff;color: #000;}
+
+/* Ubuntu colors */
+td.ubuntuBackground {background: #380c2a;color: #fff;}
+td.ubuntuForeground {background: #ffffff;color: #000;}
+td.ubuntuColor0 {background: #171421;color: #fff;}
+td.ubuntuColor1 {background: #c01c28;color: #fff;}
+td.ubuntuColor2 {background: #26a269;color: #fff;}
+td.ubuntuColor3 {background: #a2734c;color: #fff;}
+td.ubuntuColor4 {background: #12488b;color: #fff;}
+td.ubuntuColor5 {background: #a347ba;color: #fff;}
+td.ubuntuColor6 {background: #2aa1b3;color: #fff;}
+td.ubuntuColor7 {background: #d0cfcc;color: #000;}
+td.ubuntuColor8 {background: #5e5c64;color: #fff;}
+td.ubuntuColor9 {background: #f66151;color: #fff;}
+td.ubuntuColor10 {background: #33da7a;color: #000;}
+td.ubuntuColor11 {background: #e9ad0c;color: #000;}
+td.ubuntuColor12 {background: #2a7bde;color: #fff;}
+td.ubuntuColor13 {background: #c061cb;color: #fff;}
+td.ubuntuColor14 {background: #33c7de;color: #000;}
+td.ubuntuColor15 {background: #ffffff;color: #000;}
+
+/* DOS colors */
+td.dosBackground {background: #000000;color: #fff;}
+td.dosForeground {background: #aaaaaa;color: #000;}
+td.dosColor0 {background: #000000;color: #fff;}
+td.dosColor1 {background: #cd0000;color: #fff;}
+td.dosColor2 {background: #00cd00;color: #fff;}
+td.dosColor3 {background: #cdcd00;color: #fff;}
+td.dosColor4 {background: #0000cd;color: #fff;}
+td.dosColor5 {background: #cd00cd;color: #fff;}
+td.dosColor6 {background: #00cdcd;color: #fff;}
+td.dosColor7 {background: #c0c0c0;color: #000;}
+td.dosColor8 {background: #7f7f7f;color: #fff;}
+td.dosColor9 {background: #ff0000;color: #fff;}
+td.dosColor10 {background: #00ff00;color: #000;}
+td.dosColor11 {background: #ffff00;color: #000;}
+td.dosColor12 {background: #0000ff;color: #fff;}
+td.dosColor13 {background: #ff00ff;color: #fff;}
+td.dosColor14 {background: #00ffff;color: #000;}
+td.dosColor15 {background: #ffffff;color: #000;}
+
+/* VS Code colors */
+td.vscodeBackground {background: #1e1e1e;color: #fff;}
+td.vscodeForeground {background: #d4d4d4;color: #000;}
+td.vscodeColor0 {background: #000000;color: #fff;}
+td.vscodeColor1 {background: #c50f1f;color: #fff;}
+td.vscodeColor2 {background: #16825d;color: #fff;}
+td.vscodeColor3 {background: #d7ba7d;color: #fff;}
+td.vscodeColor4 {background: #007acc;color: #fff;}
+td.vscodeColor5 {background: #68217a;color: #fff;}
+td.vscodeColor6 {background: #98c7e1;color: #fff;}
+td.vscodeColor7 {background: #d4d4d4;color: #000;}
+td.vscodeColor8 {background: #858585;color: #fff;}
+td.vscodeColor9 {background: #da6771;color: #fff;}
+td.vscodeColor10 {background: #6a9953;color: #000;}
+td.vscodeColor11 {background: #ffd700;color: #000;}
+td.vscodeColor12 {background: #04395e;color: #fff;}
+td.vscodeColor13 {background: #d470d6;color: #fff;}
+td.vscodeColor14 {background: #9cdcfe;color: #000;}
+td.vscodeColor15 {background: #ffffff;color: #000;}
+
+/* Powershell colors */
+td.powershellBackground {background: rgb(01,36,86);color: #fff;}
+td.powershellForeground {background: #eeedf0;color: #000;}
+td.powershellColor0 {background: #000000;color: #fff;}
+td.powershellColor1 {background: #800000;color: #fff;}
+td.powershellColor2 {background: #008000;color: #fff;}
+td.powershellColor3 {background: #808000;color: #fff;}
+td.powershellColor4 {background: #000080;color: #fff;}
+td.powershellColor5 {background: #800080;color: #fff;}
+td.powershellColor6 {background: #008080;color: #fff;}
+td.powershellColor7 {background: #c0c0c0;color: #000;}
+td.powershellColor8 {background: #808080;color: #fff;}
+td.powershellColor9 {background: #ff0000;color: #fff;}
+td.powershellColor10 {background: #00ff00;color: #000;}
+td.powershellColor11 {background: #ffff00;color: #000;}
+td.powershellColor12 {background: #0000ff;color: #fff;}
+td.powershellColor13 {background: #ff00ff;color: #fff;}
+td.powershellColor14 {background: #00ffff;color: #000;}
+td.powershellColor15 {background: #ffffff;color: #000;}
+
+/* Windows Terminal (Campbell) colors */
+td.winterminalBackground {background: #0c0c0c;color: #fff;}
+td.winterminalForeground {background: #cccccc;color: #000;}
+td.winterminalColor0 {background: #0c0c0c;color: #fff;}
+td.winterminalColor1 {background: #c50f1f;color: #fff;}
+td.winterminalColor2 {background: #13a10e;color: #fff;}
+td.winterminalColor3 {background: #c19c00;color: #fff;}
+td.winterminalColor4 {background: #0037da;color: #fff;}
+td.winterminalColor5 {background: #881798;color: #fff;}
+td.winterminalColor6 {background: #3a96dd;color: #fff;}
+td.winterminalColor7 {background: #cccccc;color: #000;}
+td.winterminalColor8 {background: #767676;color: #fff;}
+td.winterminalColor9 {background: #e74856;color: #fff;}
+td.winterminalColor10 {background: #16c60c;color: #000;}
+td.winterminalColor11 {background: #f9f1a5;color: #000;}
+td.winterminalColor12 {background: #3b78ff;color: #fff;}
+td.winterminalColor13 {background: #b4009e;color: #fff;}
+td.winterminalColor14 {background: #61d6d6;color: #000;}
+td.winterminalColor15 {background: #f2f2f2;color: #000;}
+
+/* Commodore 64 (C64) - 8color*/
+td.c648Background {background: #40318d;color: #fff;}
+td.c648Foreground {background: #7869c4;color: #000;}
+td.c648Color0 {background: #090300;color: #fff;}
+td.c648Color1 {background: #883932;color: #fff;}
+td.c648Color2 {background: #55a049;color: #000;}
+td.c648Color3 {background: #bfce72;color: #000;}
+td.c648Color4 {background: #0000aa;color: #fff;}
+td.c648Color5 {background: #8b3f96;color: #fff;}
+td.c648Color6 {background: #67b6bd;color: #000;}
+td.c648Color7 {background: #ffffff;color: #000;}
+td.c648Color8 {background: #000000;color: #fff;}
+td.c648Color9 {background: #883932;color: #fff;}
+td.c648Color10 {background: #55a049;color: #000;}
+td.c648Color11 {background: #bfce72;color: #000;}
+td.c648Color12 {background: #0000aa;color: #fff;}
+td.c648Color13 {background: #8b3f96;color: #fff;}
+td.c648Color14 {background: #67b6bd;color: #000;}
+td.c648Color15 {background: #f7f7f7;color: #000;}
+
+/* Commodore 64 (C64) - 16color*/
+td.c6416Background {background: #4242e7;color: #fff;}
+td.c6416Foreground {background: #a5a5ff;color: #000;}
+td.c6416Color0 {background: #000000;color: #fff;}
+td.c6416Color1 {background: #ffffff;color: #000;}
+td.c6416Color2 {background: #9f4e44;color: #000;}
+td.c6416Color3 {background: #6abfc6;color: #000;}
+td.c6416Color4 {background: #a057a3;color: #fff;}
+td.c6416Color5 {background: #5cab5e;color: #000;}
+td.c6416Color6 {background: #50459b;color: #000;}
+td.c6416Color7 {background: #c9d487;color: #000;}
+td.c6416Color8 {background: #a1683c;color: #fff;}
+td.c6416Color9 {background: #6d5412;color: #fff;}
+td.c6416Color10 {background: #cb7e75;color: #000;}
+td.c6416Color11 {background: #626262;color: #000;}
+td.c6416Color12 {background: #898989;color: #fff;}
+td.c6416Color13 {background: #9ae29b;color: #000;}
+td.c6416Color14 {background: #887ecb;color: #000;}
+td.c6416Color15 {background: #adadad;color: #000;}
+
+/* Github colors */
+td.githubBackground {background: #f4f4f4;color: #000;}
+td.githubForeground {background: #3e3e3e;color: #fff;}
+td.githubColor0 {background: #3e3e3e;color: #fff;}
+td.githubColor1 {background: #970b16;color: #fff;}
+td.githubColor2 {background: #07962a;color: #fff;}
+td.githubColor3 {background: #f8eec7;color: #000;}
+td.githubColor4 {background: #003e8a;color: #fff;}
+td.githubColor5 {background: #e94691;color: #000;}
+td.githubColor6 {background: #89d1ec;color: #000;}
+td.githubColor7 {background: #ffffff;color: #000;}
+td.githubColor8 {background: #666666;color: #fff;}
+td.githubColor9 {background: #de0000;color: #fff;}
+td.githubColor10 {background: #87d5a2;color: #000;}
+td.githubColor11 {background: #f1d007;color: #000;}
+td.githubColor12 {background: #2e6cba;color: #fff;}
+td.githubColor13 {background: #ffa29f;color: #000;}
+td.githubColor14 {background: #1cfafe;color: #000;}
+td.githubColor15 {background: #ffffff;color: #000;}
+
+/* Firefox colors */
+td.firefoxBackground {background: #0e1011;color: #fff;}
+td.firefoxForeground {background: #7c8fa4;color: #000;}
+td.firefoxColor0 {background: #002831;color: #fff;}
+td.firefoxColor1 {background: #e63853;color: #000;}
+td.firefoxColor2 {background: #5eb83c;color: #000;}
+td.firefoxColor3 {background: #a57706;color: #000;}
+td.firefoxColor4 {background: #359ddf;color: #000;}
+td.firefoxColor5 {background: #d75cff;color: #000;}
+td.firefoxColor6 {background: #4b73a2;color: #000;}
+td.firefoxColor7 {background: #dcdcdc;color: #000;}
+td.firefoxColor8 {background: #001e27;color: #fff;}
+td.firefoxColor9 {background: #e1003f;color: #000;}
+td.firefoxColor10 {background: #1d9000;color: #000;}
+td.firefoxColor11 {background: #cd9409;color: #000;}
+td.firefoxColor12 {background: #006fc0;color: #000;}
+td.firefoxColor13 {background: #a200da;color: #000;}
+td.firefoxColor14 {background: #005794;color: #000;}
+td.firefoxColor15 {background: #e2e2e2;color: #000;}
+
+/* Batman colors */
+td.batmanBackground {background: #1b1d1e;color: #fff;}
+td.batmanForeground {background: #6f6f6f;color: #000;}
+td.batmanColor0 {background: #1b1d1e;color: #fff;}
+td.batmanColor1 {background: #e6dc44;color: #000;}
+td.batmanColor2 {background: #c8be46;color: #000;}
+td.batmanColor3 {background: #f4fd22;color: #000;}
+td.batmanColor4 {background: #737174;color: #fff;}
+td.batmanColor5 {background: #747271;color: #fff;}
+td.batmanColor6 {background: #62605f;color: #fff;}
+td.batmanColor7 {background: #c6c5bf;color: #000;}
+td.batmanColor8 {background: #505354;color: #fff;}
+td.batmanColor9 {background: #fff78e;color: #000;}
+td.batmanColor10 {background: #fff27d;color: #000;}
+td.batmanColor11 {background: #feed6c;color: #000;}
+td.batmanColor12 {background: #919495;color: #000;}
+td.batmanColor13 {background: #9a9a9d;color: #000;}
+td.batmanColor14 {background: #a3a3a6;color: #000;}
+td.batmanColor15 {background: #dadbd6;color: #000;}
+
+/* Hulk colors */
+td.hulkBackground {background: #1b1d1e;color: #fff;}
+td.hulkForeground {background: #b5b5b5;color: #000;}
+td.hulkColor0 {background: #1b1d1e;color: #fff;}
+td.hulkColor1 {background: #269d1b;color: #000;}
+td.hulkColor2 {background: #13ce30;color: #000;}
+td.hulkColor3 {background: #63e457;color: #000;}
+td.hulkColor4 {background: #2525f5;color: #fff;}
+td.hulkColor5 {background: #641f74;color: #fff;}
+td.hulkColor6 {background: #378ca9;color: #fff;}
+td.hulkColor7 {background: #d9d8d1;color: #000;}
+td.hulkColor8 {background: #505354;color: #fff;}
+td.hulkColor9 {background: #8dff2a;color: #000;}
+td.hulkColor10 {background: #48ff77;color: #000;}
+td.hulkColor11 {background: #3afe16;color: #000;}
+td.hulkColor12 {background: #506b95;color: #fff;}
+td.hulkColor13 {background: #72589d;color: #fff;}
+td.hulkColor14 {background: #4085a6;color: #fff;}
+td.hulkColor15 {background: #e5e6e1;color: #000;}
+
+/* Minecraft colors */
+td.minecraftBackground {background: #000000;color: #fff;}
+td.minecraftForeground {background: #aaaaaa;color: #000;}
+td.minecraftColor0 {background: #000000;color: #fff;}
+td.minecraftColor1 {background: #0000aa;color: #fff;}
+td.minecraftColor2 {background: #00aa00;color: #000;}
+td.minecraftColor3 {background: #00aaaa;color: #000;}
+td.minecraftColor4 {background: #aa0000;color: #fff;}
+td.minecraftColor5 {background: #aa00aa;color: #fff;}
+td.minecraftColor6 {background: #ffaa00;color: #000;}
+td.minecraftColor7 {background: #aaaaaa;color: #000;}
+td.minecraftColor8 {background: #555555;color: #fff;}
+td.minecraftColor9 {background: #5555ff;color: #000;}
+td.minecraftColor10 {background: #55ff55;color: #000;}
+td.minecraftColor11 {background: #55ffff;color: #000;}
+td.minecraftColor12 {background: #ff5555;color: #fff;}
+td.minecraftColor13 {background: #ff55ff;color: #000;}
+td.minecraftColor14 {background: #ffff55;color: #000;}
+td.minecraftColor15 {background: #ffffff;color: #000;}
+
+/* custom colors */
+td.customBackground {background: #000000;color: #fff;}
+td.customForeground {background: #a8a8a8;color: #000;}
+td.customColor0 {background: #000000;color: #fff;}
+td.customColor1 {background: #a80000;color: #fff;}
+td.customColor2 {background: #00a800;color: #fff;}
+td.customColor3 {background: #a85400;color: #fff;}
+td.customColor4 {background: #0000a8;color: #fff;}
+td.customColor5 {background: #a800a8;color: #fff;}
+td.customColor6 {background: #00a8a8;color: #fff;}
+td.customColor7 {background: #a8a8a8;color: #000;}
+td.customColor8 {background: #545454;color: #fff;}
+td.customColor9 {background: #fc5454;color: #fff;}
+td.customColor10 {background: #54fc54;color: #000;}
+td.customColor11 {background: #fcfc54;color: #000;}
+td.customColor12 {background: #5454fc;color: #fff;}
+td.customColor13 {background: #fc54fc;color: #fff;}
+td.customColor14 {background: #54fcfc;color: #000;}
+td.customColor15 {background: #fcfcfc;color: #000;}
+
+/* Monochrome (black on white) */
+td.monowhiteBackground {background: #ffffff;color: #000;}
+td.monowhiteForeground {background: #000000;color: #fff;}
+td.monowhiteColor0 {background: #000000;color: #fff;}
+td.monowhiteColor1 {background: #323232;color: #fff;}
+td.monowhiteColor2 {background: #666666;color: #fff;}
+td.monowhiteColor3 {background: #999999;color: #fff;}
+td.monowhiteColor4 {background: #191919;color: #fff;}
+td.monowhiteColor5 {background: #4c4c4c;color: #fff;}
+td.monowhiteColor6 {background: #7f7f7f;color: #fff;}
+td.monowhiteColor7 {background: #b2b2b2;color: #fff;}
+td.monowhiteColor8 {background: #000000;color: #fff;}
+td.monowhiteColor9 {background: #323232;color: #fff;}
+td.monowhiteColor10 {background: #666666;color: #fff;}
+td.monowhiteColor11 {background: #999999;color: #fff;}
+td.monowhiteColor12 {background: #191919;color: #fff;}
+td.monowhiteColor13 {background: #4c4c4c;color: #fff;}
+td.monowhiteColor14 {background: #7f7f7f;color: #fff;}
+td.monowhiteColor15 {background: #b2b2b2;color: #fff;}
+
+/* Monochrome (white on black) */
+td.monoblackBackground {background: #000000;color: #fff;}
+td.monoblackForeground {background: #ffffff;color: #000;}
+td.monoblackColor0 {background: #ffffff;color: #000;}
+td.monoblackColor1 {background: #b2b2b2;color: #000;}
+td.monoblackColor2 {background: #cbcbcb;color: #000;}
+td.monoblackColor3 {background: #f2f2f2;color: #000;}
+td.monoblackColor4 {background: #a5a5a5;color: #000;}
+td.monoblackColor5 {background: #bfbfbf;color: #000;}
+td.monoblackColor6 {background: #d8d8d8;color: #000;}
+td.monoblackColor7 {background: #ffffff;color: #000;}
+td.monoblackColor8 {background: #ffffff;color: #000;}
+td.monoblackColor9 {background: #b2b2b2;color: #000;}
+td.monoblackColor10 {background: #cbcbcb;color: #000;}
+td.monoblackColor11 {background: #f2f2f2;color: #000;}
+td.monoblackColor12 {background: #a5a5a5;color: #000;}
+td.monoblackColor13 {background: #bfbfbf;color: #000;}
+td.monoblackColor14 {background: #d8d8d8;color: #000;}
+td.monoblackColor15 {background: #ffffff;color: #000;}
+
+/* Monochrome (blueprint) */
+td.monoblueBackground {background: #005fd7;color: #fff;}
+td.monoblueForeground {background: #ffffff;color: #000;}
+td.monoblueColor0 {background: #ffffff;color: #000;}
+td.monoblueColor1 {background: #b2b2b2;color: #000;}
+td.monoblueColor2 {background: #cbcbcb;color: #000;}
+td.monoblueColor3 {background: #f2f2f2;color: #000;}
+td.monoblueColor4 {background: #a5a5a5;color: #000;}
+td.monoblueColor5 {background: #bfbfbf;color: #000;}
+td.monoblueColor6 {background: #d8d8d8;color: #000;}
+td.monoblueColor7 {background: #ffffff;color: #000;}
+td.monoblueColor8 {background: #ffffff;color: #000;}
+td.monoblueColor9 {background: #b2b2b2;color: #000;}
+td.monoblueColor10 {background: #cbcbcb;color: #000;}
+td.monoblueColor11 {background: #f2f2f2;color: #000;}
+td.monoblueColor12 {background: #a5a5a5;color: #000;}
+td.monoblueColor13 {background: #bfbfbf;color: #000;}
+td.monoblueColor14 {background: #d8d8d8;color: #000;}
+td.monoblueColor15 {background: #ffffff;color: #000;}
+
+/* Amber Phosphor */
+td.amberBackground {background: #282828;color: #fff;}
+td.amberForeground {background: #ffb000;color: #000;}
+td.amberColor0 {background: #664600;color: #fff;}
+td.amberColor1 {background: #7f5800;color: #fff;}
+td.amberColor2 {background: #cc8c00;color: #000;}
+td.amberColor3 {background: #e59e00;color: #000;}
+td.amberColor4 {background: #664600;color: #fff;}
+td.amberColor5 {background: #996900;color: #fff;}
+td.amberColor6 {background: #b27b00;color: #000;}
+td.amberColor7 {background: #ffb000;color: #000;}
+td.amberColor8 {background: #664600;color: #fff;}
+td.amberColor9 {background: #7f5800;color: #fff;}
+td.amberColor10 {background: #cc8c00;color: #000;}
+td.amberColor11 {background: #e59e00;color: #000;}
+td.amberColor12 {background: #664600;color: #fff;}
+td.amberColor13 {background: #996900;color: #fff;}
+td.amberColor14 {background: #b27b00;color: #000;}
+td.amberColor15 {background: #ffb000;color: #000;}
+
+/* Green Phosphor */
+td.greenBackground {background: #282828;color: #fff;}
+td.greenForeground {background: #00ff66;color: #000;}
+td.greenColor0 {background: #006628;color: #fff;}
+td.greenColor1 {background: #007f33;color: #fff;}
+td.greenColor2 {background: #00cc51;color: #000;}
+td.greenColor3 {background: #00e55b;color: #000;}
+td.greenColor4 {background: #006628;color: #fff;}
+td.greenColor5 {background: #00993d;color: #fff;}
+td.greenColor6 {background: #00b247;color: #000;}
+td.greenColor7 {background: #00ff66;color: #000;}
+td.greenColor8 {background: #006628;color: #fff;}
+td.greenColor9 {background: #007f33;color: #fff;}
+td.greenColor10 {background: #00cc51;color: #000;}
+td.greenColor11 {background: #00e55b;color: #000;}
+td.greenColor12 {background: #006628;color: #fff;}
+td.greenColor13 {background: #00993d;color: #fff;}
+td.greenColor14 {background: #00b247;color: #000;}
+td.greenColor15 {background: #00ff66;color: #000;}
+
+/* Blue Phosphor */
+td.blueBackground {background: #282828;color: #fff;}
+td.blueForeground {background: #00a3dd;color: #000;}
+td.blueColor0 {background: #004158;color: #fff;}
+td.blueColor1 {background: #00516e;color: #fff;}
+td.blueColor2 {background: #0082b0;color: #000;}
+td.blueColor3 {background: #0092c6;color: #000;}
+td.blueColor4 {background: #004158;color: #fff;}
+td.blueColor5 {background: #006184;color: #fff;}
+td.blueColor6 {background: #00729a;color: #000;}
+td.blueColor7 {background: #00a3dd;color: #000;}
+td.blueColor8 {background: #003042;color: #fff;}
+td.blueColor9 {background: #00516e;color: #fff;}
+td.blueColor10 {background: #0082b0;color: #000;}
+td.blueColor11 {background: #0092c6;color: #000;}
+td.blueColor12 {background: #004158;color: #fff;}
+td.blueColor13 {background: #006184;color: #fff;}
+td.blueColor14 {background: #00729a;color: #000;}
+td.blueColor15 {background: #00a3dd;color: #000;}
+
+
+/* Phosphor Color Codes */
+
+.container-phosphor {
+    display: flex;
+    flex-direction: column;
+    background: #282828;
+    padding: 10px;
+    margin: 0 0 20px 20px;
+}
+
+p.amber {color: #ffb000;}
+p.amberLt {color: #ffcc00;}
+p.green1 {color: #33ff00;}
+p.apple2 {color: #33ff33;}
+p.green2 {color: #00ff33;}
+p.apple2c {color: #66ff66;}
+p.green3 {color: #00ff66;}
+p.blue {color: #00a3dd;}
+p.phosphorBackground {color: #aaa;}
+
+table.phosphor {
+    font-family: 'DejaVu Sans';
+    font-size: 9pt;
+    margin: 10px 40px 10px 40px;
+    border-collapse: collapse;
+    border: none;
+}
+
+td.title {
+    border: none;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+td.content {
+    border: none;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+td.rgb {
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+tr.amber {color: #ffb000;}
+tr.amberLt {color: #ffcc00;}
+tr.green1 {color: #33ff00;}
+tr.apple2 {color: #33ff33;}
+tr.green2 {color: #00ff33;}
+tr.apple2c {color: #66ff66;}
+tr.green3 {color: #00ff66;}
+tr.blue {color: #00a3dd;}
+tr.phosphorBackground {color: #aaa;}
+
+/* Solarized */
+td.solarBackground {background: #002b36;color: #fff;}
+td.solarForeground {background: #657b83;color: #000;}
+td.solarColor0 {background: #073642;color: #fff;}
+td.solarColor1 {background: #dc322f;color: #fff;}
+td.solarColor2 {background: #859900;color: #fff;}
+td.solarColor3 {background: #b58900;color: #fff;}
+td.solarColor4 {background: #268bd2;color: #fff;}
+td.solarColor5 {background: #d33682;color: #fff;}
+td.solarColor6 {background: #2aa198;color: #fff;}
+td.solarColor7 {background: #eee8d5;color: #000;}
+td.solarColor8 {background: #002b36;color: #fff;}
+td.solarColor9 {background: #cb4b16;color: #fff;}
+td.solarColor10 {background: #586e75;color: #000;}
+td.solarColor11 {background: #657b83;color: #000;}
+td.solarColor12 {background: #839496;color: #fff;}
+td.solarColor13 {background: #6c71c4;color: #fff;}
+td.solarColor14 {background: #93a1a1;color: #000;}
+td.solarColor15 {background: #fdf6e3;color: #000;}
+
+/* Solarized Light*/
+td.solarLightBackground {background: #fdf6e3;color: #000;}
+td.solarLightForeground {background: #839496;color: #000;}
+td.solarLightColor0 {background: #eee8d5;color: #000;}
+td.solarLightColor1 {background: #dc322f;color: #fff;}
+td.solarLightColor2 {background: #859900;color: #fff;}
+td.solarLightColor3 {background: #b58900;color: #fff;}
+td.solarLightColor4 {background: #268bd2;color: #fff;}
+td.solarLightColor5 {background: #d33682;color: #fff;}
+td.solarLightColor6 {background: #2aa198;color: #fff;}
+td.solarLightColor7 {background: #073642;color: #fff;}
+td.solarLightColor8 {background: #fdf6e3;color: #000;}
+td.solarLightColor9 {background: #cb4b16;color: #fff;}
+td.solarLightColor10 {background: #93a1a1;color: #000;}
+td.solarLightColor11 {background: #839496;color: #000;}
+td.solarLightColor12 {background: #657b83;color: #fff;}
+td.solarLightColor13 {background: #6c71c4;color: #fff;}
+td.solarLightColor14 {background: #586e75;color: #000;}
+td.solarLightColor15 {background: #002b36;color: #fff;}
+
+/* CMYK*/
+td.cmykBackground {background: #000000;color: #fff;}
+td.cmykForeground {background: #aaaaaa;color: #000;}
+td.cmykColor0 {background: #404040;color: #fff;}
+td.cmykColor1 {background: #ec008c;color: #000;}
+td.cmykColor2 {background: #00aeef;color: #000;}
+td.cmykColor3 {background: #fff200;color: #000;}
+td.cmykColor4 {background: #ec008c;color: #000;}
+td.cmykColor5 {background: #fff200;color: #000;}
+td.cmykColor6 {background: #00aeef;color: #000;}
+td.cmykColor7 {background: #ffffff;color: #000;}
+td.cmykColor8 {background: #404040;color: #fff;}
+td.cmykColor9 {background: #ec008c;color: #000;}
+td.cmykColor10 {background: #00aeef;color: #000;}
+td.cmykColor11 {background: #fff200;color: #000;}
+td.cmykColor12 {background: #ec008c;color: #000;}
+td.cmykColor13 {background: #fff200;color: #000;}
+td.cmykColor14 {background: #00aeef;color: #000;}
+td.cmykColor15 {background: #ffffff;color: #000;}

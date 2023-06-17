@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="personal blog">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="b1ack0p">
+
+    <title>My personal blog</title>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+	
+<body>	
+
+	<div class="flex-nav">
+	
+  	<header>
+	 
+	  <nav>
+		<ul class="nav-listing">
+		  <li class="nav-listing">
+		    <a class="nav" href="../index.html"><--</a>
+		    <a class="nav" href="../index.html">Home</a>
+		    <a class="nav" href="#">Posts</a>
+		    <a class="nav" href="#">About</a>
+		  </li>
+		</ul>
+	  </nav>
+	
+	</header>
+	
+	</div>
+	
+	<div class="flex-main">
+	
+	<main>
+	
+	<article>
+	
+	<h2>PiXflat Theme</h2>
+	
+	<date>18-05-2022</date>
+	
+	</br></br></br>
+
+<p>This is RaspberryPiOS PiXflat modified theme and icons for LXDE (Openbox) / XFCE (xfwm4) / GNOME (GTK).</p>
+
+<p>I love the simplicity and clean look of RasPiOS PiX and PiXflat theme so I wanted to modify it. it is my custom amateur tweak so I can't say it is perfect but at least it looks like RaspiOS theme very close enough. Any contribution to make it perfect is very welcome.</p>
+
+<p>I mostly kept original PiXflat icons, renamed some of them to adapt to Openbox and XFCE and added some additional icons. I've also drawn some other icons and added in scalable format. there was no built in battery icons in PiXflat so i've drawn myself in Inkscape but there are some rendering issues in XFCE. Anyone who can make better battery icons or make my icons better or fix rendering issue is welcome.</p>
+
+<p>For xfwm4 theme I modified Mowi-24 xfwm4 theme and enlarged window title bars to 32px from 24px and made window close/minimize/maximize buttons same with original PiXflat theme. unfortunately after I changed title bar size Mowi xfwm4 theme no longer brought the main PiXflat theme colors so I had to color bars myself. so this also needs fixing. originally Mowi-24 theme takes the colors from main theme. </p>
+
+<p>Mowi-24 xfwm4 theme can be downloaded here: <a href="https://www.xfce-look.org/p/1700122/">https://www.xfce-look.org/p/1700122/</a></p>
+
+<p>Theme suits well in LXDE/Openbox as I've experienced in Debian 11 (stable). Some issues in Xfce but mostly it fits well. It requires some tweaks as I've written below. In Gnome theme is not perfectly fitting but theme colors and icons applies good.</p>
+
+<p>I didn't have chance to test theme and icons in other distro so all I've experienced in GTK-2.</p>
+
+<p>As I've mentioned above theme is not perfect so it needs a touch by a person with better GTK theming knowledge.</p>
+
+ <img src="pix-theme.png" alt="PiXflat theme" width="60%" height="60%">
+ 
+ <p> Check the link for more screenshots: <a href="https://github.com/b1ack0p/pixflat-theme">https://github.com/b1ack0p/pixflat-theme</a></p>
+
+<h4>What is inside:</h4>
+
+    <ul>
+    <li>font : Default RaspberryPiOS font - Piboto</li>
+    <li>gtk-3.0 : contains sample gtk.css file</li>
+    </ul>
+    
+    <p>icons:</p>
+     <ul>
+    <li>PiXflat: modified PiXflat icons inherits to Gnome icons (you need to install Gnome icons separately)</li>
+    <li>PiX: retro look of PiXflat icons (early RpiOS icons)</li>
+    <li>gnome-icons: contains Gnome icon theme v3.12.0-3 package</li>
+    </ul>
+
+    <p>Wallpaper: RaspberryPiOS default wallpapers (rpd-wallpaper)</p>
+
+    <p>theme:</p>
+     <ul>
+    	<li>PiX theme</li>
+    	<li>PiXflat theme (modified gray theme)</li>
+    	<li>PiXflat-blue theme (modified blue theme)</li>
+    </ul>
+
+<h4>Getting ready:</h4>
+
+<ul>
+    <li>Copy icon folders to <code class="input">/usr/share/icons</code> ( example: <code class="input">sudo cp -r ../icons/PiXflat /usr/share/icons/</code> or copy to <code class="input">~/.icons</code> in your <strong>$USER</strong> dir.)</li>
+    <li>Copy <code class="input">PiX/PiXflat/PiXflat-blue</code> themes from "themes" folder to <code class="input">/usr/share/themes</code> or copy to <code class="input">~/.themes</code> in your <strong>$USER</strong> dir.</li>
+    <li>install <code class="input">font/fonts-piboto_1.2_all.deb</code> file which contains official RaspiOS font set "Piboto"</li>
+    <li>To cache newly installed/loaded fonts: <code class="input">fc-cache -f -v</code></li>
+    </ul>
+
+<h4>Setting theme and icons in XFCE:</h4>
+<ul>
+<li>Settings Manager > Appearance > Style > choose one of PiXflat theme</li>
+<li>Settings Manager > Appearance > Icons > PiXflat icons</li>
+<li>Settings Manager > Appearance > Font > Default font > PibotoLt Regular 10</li>
+<li>Settings Manager > Window Manager > choose one of PiXflat for xfwm4 window there and change Font to PibotoLT Regular</li>
+<li>Settings Manager > Window Manager Tweaks > Compositor > disable "Show shadows under dock windows/regular windows/popup windows/</li>
+<li>Settings Manager > Mouse and Touchpad > Theme > choose PiXflat (I combined default PiXflat cursor icons with <a href="https://store.kde.org/p/1416041/">https://store.kde.org/p/1416041/</a>)</li>
+</ul>
+
+<pre class="note">"PiX" theme is buggy - needs fixing.</pre>
+
+<pre class="note">PiXflat icon theme inherits from Gnome 3.12.0-3 icons. You can find Gnome icon theme in the repository directory or you can download from the link below.</pre>
+
+<pre class="note">IMPORTANT: to use regular icons instead of symbolic icons as status icons on XFCE panel (this is necessary to get correct colored icons for the status icons such as battery/volume/notification icons otherwise they will appear black and broken) edit or create "gtk.css" in your "/home/user/.config/gtk3/gtk.css" and add this line: ".xfce4-panel image { -gtk-icon-style: regular; }" or copy .css file from "/icons/gtk3" to "/home/$user/.config/gtk3/" folder
+</pre>
+
+<p>- you may want to run <code class="input">sudo gtk-update-icon-cache</code> "/usr/share/icons/PiXflat" after selecting icon theme. if you make any change on icon theme run the same command to refresh system.</p>
+
+<p>- you may need this also <code class="input">sudo apt install gtk2-engines</code></p>
+
+<h4>LightDM user image on logon screen:</h4>
+
+<ul>
+<li>uncomment Hide user greeter image = false in "/etc/lightdm/lightdm.conf"</li>
+<li>install <code class="input">sudo apt install lightdm-gtk-greeter-settings</code></li>
+<li>in LightDM GTK Greeter Settings app choose desired user-greeter image (image should be in directory where system can reach, not in "/home/$user directory")</li>
+</ul>
+
+<h4>Same background on LightDM greeter screen with desktop wallpaper:</h4>
+
+<ul>
+<li>install <code class="input">sudo apt install accountsservice</code></li>
+<li>copy wallpapers you wish to use to /usr/share/backgrounds/</li>
+<li>select Use user wallpaper if available in LightDM GTK Greeter Settings app</li>
+</ul>
+
+<h4>Original files:</h4>
+
+<ul>
+<li>Non-modified PiXflat theme can be found in: <a href="https://github.com/RPi-Distro/raspberrypi-ui-mods">https://github.com/RPi-Distro/raspberrypi-ui-mods</a></li>
+<li>Non-modified PiXflat icons: <a href="http://archive.raspberrypi.org/debian/pool/main/p/pixflat-icons/">http://archive.raspberrypi.org/debian/pool/main/p/pixflat-icons/</a></li>
+<li>Piboto font : <a href="https://archive.raspberrypi.org/debian/pool/main/f/fonts-piboto/">https://archive.raspberrypi.org/debian/pool/main/f/fonts-piboto/</a></li>
+<li>Gnome icon theme (3.12.0-3): <a href="https://packages.debian.org/bullseye/all/gnome-icon-theme/download">https://packages.debian.org/bullseye/all/gnome-icon-theme/download</a></li>
+<li>gtk2-engines-pixflat: <a href="http://archive.raspberrypi.org/debian/pool/main/g/gtk2-engines-pixflat/">http://archive.raspberrypi.org/debian/pool/main/g/gtk2-engines-pixflat/</a></li>
+<li>gtk2-engines-clearlookspix: <a href="http://archive.raspberrypi.org/debian/pool/main/g/gtk2-engines-clearlookspix/">http://archive.raspberrypi.org/debian/pool/main/g/gtk2-engines-clearlookspix/</a></li>
+<li>gtk2-engines-pixbuf: <a href="http://archive.raspberrypi.org/debian/pool/main/g/gtk+2.0/">http://archive.raspberrypi.org/debian/pool/main/g/gtk+2.0/</a></li>
+<li>default wallpapers: <a href="https://archive.raspberrypi.org/debian/pool/main/r/rpd-wallpaper/">https://archive.raspberrypi.org/debian/pool/main/r/rpd-wallpaper/</a></li>
+<li>default wallpapers (4k): <a href="https://archive.raspberrypi.org/debian/pool/main/r/rpd-wallpaper-4k/">https://archive.raspberrypi.org/debian/pool/main/r/rpd-wallpaper-4k/</a></li>
+</ul>
+
+	</article>
+	
+	</main>
+	
+	</div>
+	
+	<div class="flex-footer">
+	
+		<footer>
+
+			<p>2023 (c) MinimumAttic410</p>
+			<p>Github: <a href="https://github.com/minimumattic410/">https://github.com/minimumattic410/</a></p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+			<p><a href="https://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="https://jigsaw.w3.org/css-validator/images/vcss"alt="Valid CSS!" /></a></p>
+		
+		</footer>
+
+	</div>
+	
+  </body>
+  
+</html>

@@ -193,8 +193,9 @@ pre {
 	}
 	
 .note:before {
-	content: "NOTE:\A\A";
+	content: "Note:\A\A";
 	text-decoration-line: underline;
+	font-weight: bold;
 	margin: 5px;
 	
 	}

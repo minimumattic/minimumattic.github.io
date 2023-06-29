@@ -163,7 +163,7 @@ ul.nav-listing {
 	border-radius: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-style: solid;
+	border-style: dashed;
 	border-width: 1px;
 	border-color: blue;
 	}
@@ -177,7 +177,7 @@ ul.nav-listing {
 	padding: 1rem;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-style: solid;
+	border-style: dashed;
 	border-width: 1px;
 	border-color: red;
 	}

@@ -156,6 +156,18 @@ ul.nav-listing {
 	padding: 5px 0 5px 0;
 	}
 
+.odin {
+	margin-right: 7px;
+	text-decoration-line: underline;
+	text-decoration-color: yellow;
+	text-decoration-thickness: 5px;
+}
+
+.odin:hover {
+	background-color: yellow;
+	padding: 5px 0 5px 0;
+	}
+
 .input {
 	font-family: 'Dejavu Sans Mono';
 	font-size: 0.8rem;

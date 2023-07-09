@@ -72,7 +72,7 @@ header, main, footer {
 	font-style: italic;
 	flex-shrink: 1;
 	}
-.foot {
+.bottom-nav {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;

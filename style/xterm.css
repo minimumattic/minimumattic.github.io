@@ -479,16 +479,6 @@ td.blueColor15 {background: #00a3dd;color: #000;}
     flex-shrink: 1;
 }
 
-p.amber {color: #ffb000;}
-p.amberLt {color: #ffcc00;}
-p.green1 {color: #33ff00;}
-p.apple2 {color: #33ff33;}
-p.green2 {color: #00ff33;}
-p.apple2c {color: #66ff66;}
-p.green3 {color: #00ff66;}
-p.blue {color: #00a3dd;}
-p.phosphorBackground {color: #aaa;}
-
 table.phosphor {
     font-family: 'DejaVu Sans';
     font-size: 9pt;

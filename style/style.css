@@ -72,14 +72,8 @@ header, main, footer {
 	font-style: italic;
 	flex-shrink: 1;
 }
-.bottom-nav {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	flex-shrink: 1;
-}
 
-/* responsive media devices */
+/* responsive media devices 
 
 @media (max-width: 800px) {
 	.flex-nav{
@@ -102,7 +96,7 @@ header, main, footer {
 		border-right-style: dashed;
 		border-width: 1px;
 		padding: 0 10px 50px 10px;
-		flex-grow: 1;	/* let main content grow to end bottom before footer */
+		flex-grow: 1;
 		flex-shrink: 1;
 	}
 }
@@ -120,7 +114,7 @@ header, main, footer {
 		flex-shrink: 1;
 	}
 }
-/* ######################## */
+*/
 
 /* post and navigation buttons listing style */
 

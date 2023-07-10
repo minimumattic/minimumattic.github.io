@@ -1,20 +1,20 @@
 /* fonts */
 @font-face {
-    font-family: 'DejaVu Sans';
-    src: url('/fonts/DejaVuSans.woff2') format('woff2'),
-        url('/fonts/DejaVuSans.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'DejaVu Sans';
+	src: url('/fonts/DejaVuSans.woff2') format('woff2'),
+	url('/fonts/DejaVuSans.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'DejaVu Sans Mono';
-    src: url('/fonts/DejaVuSansMono.woff2') format('woff2'),
-        url('/fonts/DejaVuSansMono.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'DejaVu Sans Mono';
+	src: url('/fonts/DejaVuSansMono.woff2') format('woff2'),
+	url('/fonts/DejaVuSansMono.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 /* #################################### */
 
@@ -27,14 +27,14 @@ body {
 	padding: 0;
 	background: #D7F5EF;
 	min-height: 100vh;	/* use max height of the page */
-	}
-	
+}
+
 main, article, aside, section, header, footer {
 	font-size: 0.9rem;
-	}
+}
 
 header, main, footer {
-    flex-shrink: 1;
+	flex-shrink: 1;
 }
 
 /* containers flexbox */
@@ -48,7 +48,7 @@ header, main, footer {
 	border-width: 1px;
 	padding: 0 10px 0 10px;
 	flex-shrink: 1;
-	}
+}
 
 .flex-main {
 	display: flex;
@@ -59,7 +59,7 @@ header, main, footer {
 	padding: 0 10px 50px 10px;
 	flex-grow: 1;	/* let main content grow to end bottom before footer */
 	flex-shrink: 1;
-	}
+}
 
 .flex-footer {
 	display: flex;
@@ -71,59 +71,59 @@ header, main, footer {
 	padding: 0 10px 0 10px;
 	font-style: italic;
 	flex-shrink: 1;
-	}
+}
 .bottom-nav {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
 	flex-shrink: 1;
 }
-	
+
 /* responsive media devices */
-	
+
 @media (max-width: 800px) {
-  .flex-nav{
-	display: flex;
-	flex-direction: column;
-	border-bottom-style: dashed;
-	border-left-style: dashed;
-	border-right-style: dashed;
-	border-width: 1px;
-	padding: 0 10px 0 10px;
-	flex-shrink: 1;
-  }
+	.flex-nav{
+		display: flex;
+		flex-direction: column;
+		border-bottom-style: dashed;
+		border-left-style: dashed;
+		border-right-style: dashed;
+		border-width: 1px;
+		padding: 0 10px 0 10px;
+		flex-shrink: 1;
+	}
 }
 
 @media (max-width: 800px) {
-  .flex-main {
-	display: flex;
-	flex-direction: column;
-	border-left-style: dashed;
-	border-right-style: dashed;
-	border-width: 1px;
-	padding: 0 10px 50px 10px;
-	flex-grow: 1;	/* let main content grow to end bottom before footer */
-    flex-shrink: 1;
-  }
+	.flex-main {
+		display: flex;
+		flex-direction: column;
+		border-left-style: dashed;
+		border-right-style: dashed;
+		border-width: 1px;
+		padding: 0 10px 50px 10px;
+		flex-grow: 1;	/* let main content grow to end bottom before footer */
+		flex-shrink: 1;
+	}
 }
 
 @media (max-width: 800px) {
-  .flex-footer {
-	display: flex;
-	flex-direction: column;
-	border-top-style: dashed;
-	border-left-style: dashed;
-	border-right-style: dashed;
-	border-width: 1px;
-	padding: 0 10px 0 10px;
-	font-style: italic;
-	flex-shrink: 1;
-  }
+	.flex-footer {
+		display: flex;
+		flex-direction: column;
+		border-top-style: dashed;
+		border-left-style: dashed;
+		border-right-style: dashed;
+		border-width: 1px;
+		padding: 0 10px 0 10px;
+		font-style: italic;
+		flex-shrink: 1;
+	}
 }
 /* ######################## */
 
 /* post and navigation buttons listing style */
-	
+
 li.post-listing {
 	margin: 10px 10px 10px 0;
 	list-style: none;
@@ -149,8 +149,8 @@ ul.nav-listing {
 
 .nav {
 	margin-right: 7px;
-	}
-	
+}
+
 .nav, .post {
 	text-decoration-line: underline;
 	text-decoration-color: #AFECE0;
@@ -160,7 +160,7 @@ ul.nav-listing {
 .nav:hover, .post:hover {
 	background-color: #AFECE0;
 	padding: 5px 0 5px 0;
-	}
+}
 
 .odin {
 	margin-right: 7px;
@@ -172,7 +172,7 @@ ul.nav-listing {
 .odin:hover {
 	background-color: yellow;
 	padding: 5px 0 5px 0;
-	}
+}
 
 .input {
 	font-family: 'Dejavu Sans Mono';
@@ -184,8 +184,8 @@ ul.nav-listing {
 	border-style: solid;
 	border-width: 1px;
 	border-color: blue;
-	}
-	
+}
+
 .note {
 	font-family: 'Dejavu Sans';
 	font-size: 0.8rem;
@@ -198,7 +198,7 @@ ul.nav-listing {
 	border-style: solid;
 	border-width: 1px;
 	border-color: red;
-	}
+}
 
 pre {
 	font-family: 'Dejavu Sans Mono';
@@ -208,29 +208,29 @@ pre {
 	border-style: solid;
 	border-width: 1px;
 	border-color: blue;
-	}
-	
+}
+
 .note:before {
 	content: "Note:\A\A";
 	text-decoration-line: underline;
 	font-weight: bold;
 	margin: 5px;
 	
-	}
+}
 
 ul {
 	list-style-type: "> ";
-	}
-	
+}
+
 date {
 	font-size: 0.8rem;
 	font-style: italic;
-	}
-	
+}
+
 date:before {
 	content: "(";
-	}
+}
 
 date:after {
 	content: ")";
-	}
+}

@@ -476,6 +476,7 @@ td.blueColor15 {background: #00a3dd;color: #000;}
     background: #282828;
     padding: 10px;
     margin: 0 0 20px 20px;
+    flex-shrink: 1;
 }
 
 p.amber {color: #ffb000;}

@@ -212,6 +212,13 @@ pre {
 	
 }
 
+code.input {
+	background-color: #ddd;
+	border-style: none;
+	border-radius: 0;
+	padding: 0 2px 0 2px;
+	}
+
 ul {
 	list-style-type: "> ";
 }

@@ -1,0 +1,32 @@
+html {
+	margin-left: 240px;
+	margin-right: 240px;
+	}
+
+.input {
+	font-family: Dejavu Sans Mono;
+	font-size: 0.8rem;
+	background: #f2f1f1;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+	
+.output {
+	label: "output";
+	font-family: Dejavu Sans Mono;
+	font-size: 0.8rem;
+	background: #fbe5eb;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+
+pre {
+	display: block;
+	font-family: Dejavu Sans Mono;
+	white-space: pre;
+	margin: 1em 0;
+	}

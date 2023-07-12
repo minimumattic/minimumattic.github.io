@@ -1,0 +1,23 @@
+body {
+    background-color: yellow;
+}
+
+.box-1 {
+    margin: 20px 0 20px 0;
+    border-style: solid;
+    border-color: red;
+    padding: 30px;
+    background-color: purple;
+}
+
+.box-2 {
+    margin: 20px 0 20px 0;
+    border-style: solid;
+    border-color: red;
+    padding: 30px;
+    background-color: greenyellow;
+}
+
+p {
+    text-align: center;
+}

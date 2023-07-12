@@ -8,26 +8,32 @@
 
 * {
     margin: 0;
+    padding: 0;
+    font-size: 40px;
 }
 
 body {
-    background-color: yellow;
+    background-color: aqua;
 }
 
 .box-1 {
-    margin: 20px 0 20px 0;
-    border: 2px solid red;
+    margin: 50px;
+    border: 10px solid red;
     padding: 30px;
-    background-color: purple;
+    background-color: orange;
+    width: 200px;
+    height: 200px;
 }
 
 .box-2 {
-    margin: 20px 0 20px 0;
-    border: 2px solid red;
+    margin: 50px;
+    border: 10px solid red;
     padding: 30px;
     background-color: greenyellow;
+    width: 200px;
+    height: 200px;
 }
 
-p {
+div {
     text-align: center;
 }

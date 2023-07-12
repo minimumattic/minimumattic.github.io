@@ -3,35 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Lists</title>
+    <link rel="stylesheet" href="./style/style.css" />
 </head>
 <body>
-    <h2>"ul" Unordered list</h2>
+    <h1>HTML Lists</h1>
+    <h3>&lt;ul&gt; Unordered list</h3>
+    <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:</p>
     <ul>
         <li>item</li>
         <li>item</li>
         <li>item</li>
     </ul>
-
+    
     <p>Grocery shopping list:</p>
 
-    <ul>
-    <li>Milk</li>
-    <li>Cheese
-        <ul>
-            <li>Blue cheese</li>
-            <li>Feta</li>
-        </ul>
-    </li>
-</ul>
+    <pre class="input">
+        &lt;ul&gt;
+            &lt;li&gt;Milk&lt/li&gt;
+            &lt;li&gt;Cheese&lt;/li&gt;
+            &lt;li>Bread&lt;/li&gt;
+            &lt;li>Eggs&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
 
-    <h2>"ol" Ordered list</h2>
+    <ul>
+        <li>Milk</li>
+        <li>Cheese
+        <li>Bread</li>
+        <li>Eggs</li>
+    </ul>
+    
+    <h3>&lt;ol&gt; Ordered list</h3>
+    <p>Ordered lists are lists in which the order of the items does matter. Let's take a set of directions as an example:</p>
     <ol>
         <li>item</li>
         <li>item</li>
         <li>item</li>
     </ol>
+    
+    <h3>Nesting lists</h3>
 
-
+    <ol>
+        <li>Remove the skin from the garlic, and chop coarsely.</li>
+        <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
+        <li>Add all the ingredients into a food processor.</li>
+        <li>
+          Process all the ingredients into a paste.
+          <ul>
+            <li>
+              If you want a coarse "chunky" hummus, process it for a short time.
+            </li>
+            <li>If you want a smooth hummus, process it for a longer time.</li>
+          </ul>
+        </li>
+      </ol>      
+    
 </body>
 </html>

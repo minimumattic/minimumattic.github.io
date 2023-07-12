@@ -30,3 +30,8 @@ pre {
 	white-space: pre;
 	margin: 1em 0;
 	}
+
+.story {
+	border: 1px solid black;
+	padding: 5px;
+}

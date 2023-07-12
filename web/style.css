@@ -1,3 +1,11 @@
+/* BOX MODEL
+//---------------
+//  Margin
+//  Border
+//  Padding
+//  Content
+////////////////*/
+
 * {
     margin: 0;
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Marking up computer codes</title>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+<ul>
+    <li>&lt;code&gt;: For marking up generic pieces of computer code.</li>
+    <li>&lt;pre&gt;: For retaining whitespace (generally code blocks) — if you use indentation or excess whitespace inside your text, browsers will ignore it and you will not see it on your rendered page. If you wrap the text in &lt;pre&gt;&lt;/pre&gt; tags however, your whitespace will be rendered identically to how you see it in your text editor.</li>
+    <li>&lt;var&gt;: For specifically marking up variable names.</li>
+    <li>&lt;kbd&gt;: For marking up keyboard (and other types of) input entered into the computer.</li>
+    <li>&lt;samp&gt;: For marking up the output of a computer program.</li>
+</ul>
+<h3>- The Inline Code element &lt;code&gt;:</h3>
+<p>
+    The function <code>selectAll()</code> highlights all the text in the input
+    field so the user can, for example, copy or delete the text.
+  </p>
+  </p>
+  <h3>- The Preformatted Text element &lt;pre&gt;:</h3>
+  <pre>
+      L          TE
+        A       A
+          C    V
+           R A
+           DOU
+           LOU
+          REUSE
+          QUE TU
+          PORTES
+        ET QUI T'
+        ORNE O CI
+         VILISÉ
+        OTE-  TU VEUX
+         LA    BIEN
+        SI      RESPI
+                RER       - Apollinaire
+    </pre>  
+<h3>- The Variable element &lt;var&gt;:</h3> 
+<p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length, <var>w</var> the width and <var>h</var> the height of the box.</p>
+<h3>- The Keyboard Input element &lt;kbd&gt;:</h3>
+<p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+<h3>- The Sample Output element &lt;samp&gt;:</h3>
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+<p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+</body>
+</html>

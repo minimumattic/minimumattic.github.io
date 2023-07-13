@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quotations and Citations</title>
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+<h1>Quotations</h1>
+<h3>blockquotes:</h3>
+<p>If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a &lt;blockquote&gt; element to signify this, and include a URL pointing to the source of the quote inside a <em>"cite"</em> attribute.</p>
+<p>The HTML &lt;blockquote&gt; element defines a section that is quoted from another source.</p>
+<p>Browsers usually indent &lt;blockquote&gt; elements.</p>
+<pre class="input">
+&lt;p&gt;Here is a blockquote:&lt;/p&gt;
+&lt;blockquote
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
+  &lt;p&gt;
+    The &lt;strong&gt;HTML &lt;code&gt;&lt;blockquote&gt;&lt;/code&gt; Element&lt;/strong&gt; (or
+    &lt;em&gt;HTML Block Quotation Element&lt;/em&gt;) indicates that the enclosed text is
+    an extended quotation.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+</pre>
+<p>Here is a blockquote:</p>
+<blockquote
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
+</blockquote>
+
+<h3>inline quotations:</h3>
+<p>Inline quotations work in exactly the same way, except that they use the &lt;q&gt; element. For example, the below bit of markup contains a quotation from the MDN &lt;q&gt; page:</p>
+<pre class="input">
+    &lt;p&gt;
+        The quote element — &lt;code&gt;&lt;q&gt;&lt;/code&gt; — is
+        &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;
+          intended for short quotations that don't require paragraph breaks.
+          &lt;/q&gt;
+      &lt;/p&gt;      
+</pre>
+
+<p>
+    The quote element — <code>&lt;q&gt;</code> — is
+    <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+      intended for short quotations that don't require paragraph breaks.
+    </q>
+  </p>
+
+<h3>Abbreviations &lt;abbr&gt;</h3>
+<p>The HTML &lt;abbr&gt; tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</p>
+
+<p>Marking abbreviations can give useful information to browsers, translation systems and search-engines.</p>
+  
+<p><strong>Tip:</strong> Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.</p>
+<pre class="input">
+  &lt;p&gt;The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;
+</pre>
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<h3>&lt;address&gt; for Contact Information</h3>
+
+  <p>The HTML &lt;address&gt; tag defines the contact information for the author/owner of a document or an article.</p>
+  
+  <p>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
+  
+  <p>The text in the &lt;address&gt; element usually renders in italic, and browsers will always add a line break before and after the &lt;address&gt; element.</p>
+
+  <pre class="input">
+    &lt;address&gt;
+      Written by John Doe.&lt;br&gt;
+      Visit us at:&lt;br&gt;
+      Example.com&lt;br&gt;
+      Box 564, Disneyland&lt;br&gt;
+      USA
+    &lt;/address&gt;
+  </pre>
+  <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+
+<h3>&lt;cite&gt; for Work Title</h3>
+<p>&lt;cite&gt; element defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).</p>
+
+<p>Note: A person's name is not the title of a work.</p>
+      
+<p>The text in the &lt;cite&gt; element usually renders in italic.</p>
+
+<p>The HTML cite element defines the title of a work.</p>
+<p>Browsers usually display cite elements in italic.</p>
+
+<pre class="input">
+  &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Painted in 1893.&lt;/p&gt;
+</pre>
+
+<img src="https://www.w3schools.com/html/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+<h3>Bi-Directional Override &lt;bdo&gt;</h3>
+
+<pre class="input">
+  &lt;bdo dir="rtl"&gt;This text will be written from right to left&lt;/bdo&gt;
+</pre>
+  <bdo dir="rtl">This text will be written from right to left</bdo>
+  <pre>dir="rtl" attribute defines "right to left"</pre>
+
+</body>
+</html>

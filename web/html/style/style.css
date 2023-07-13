@@ -19,3 +19,21 @@ html {
 	border: 1px solid black;
 	padding: 5px;
 }
+
+kbd {
+	background-color: #ddd;
+	border: 0.1px solid black;
+	padding: 1px;
+}
+
+var {
+	font-weight: bold;
+}
+
+code, pre {
+	background-color: #ddd;
+}
+
+samp {
+	font-weight: bold;
+}

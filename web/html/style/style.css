@@ -20,20 +20,14 @@ html {
 	padding: 5px;
 }
 
-kbd {
+code, pre, kbd {
 	background-color: #ddd;
+}
+
+kbd {
 	border: 0.1px solid black;
-	padding: 1px;
 }
 
 var {
-	font-weight: bold;
-}
-
-code, pre {
-	background-color: #ddd;
-}
-
-samp {
 	font-weight: bold;
 }

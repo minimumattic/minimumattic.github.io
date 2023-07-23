@@ -25,3 +25,8 @@ kbd {
 var {
 	font-weight: bold;
 }
+
+samp {
+	background-color: black;
+	color: #00ff66;
+}

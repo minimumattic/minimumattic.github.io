@@ -1,16 +1,13 @@
-html {
-	margin-left: 240px;
-	margin-right: 240px;
+body {
+	margin: 0 20% 0 20%;
 	}
 
 .input {
-	font-family: Dejavu Sans Mono;
 	background: #f2f1f1;
 	border-radius: 5px;
 	}
 	
 .output {
-	font-family: Dejavu Sans Mono;
 	background: #fbe5eb;
 	border-radius: 5px;
 	}
@@ -20,11 +17,8 @@ html {
 	padding: 5px;
 }
 
-code, pre, kbd {
-	background-color: #ddd;
-}
-
 kbd {
+	background-color: #ddd;
 	border: 0.1px solid black;
 }
 

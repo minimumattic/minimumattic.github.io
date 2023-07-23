@@ -18,7 +18,7 @@
 	
 	<p>Elements can be placed within other elements. This is called nesting.</p>
 	
-	<p><em>code:</em></p>
+	<p><em>input:</em></p>
 	
 	<code class="input">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; &lt;em&gt;grumpy&lt;/em&gt;.&lt/p&gt;</code>
 	
@@ -32,7 +32,7 @@
 	
 	<p>- Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an &lt;a&gt; element creates a hyperlink, and elements such as &lt;em&gt; or &lt;strong&gt; create emphasis.</p>
 	
-	<p><em>code:</em></p>
+	<p><em>input:</em></p>
 	<pre class="input"><code>
 		&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
 		&lt;p&gt;fourth&lt;/p&gt;
@@ -51,13 +51,14 @@
 	<h3>Void Elements:</h3>
 	<p>Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called void elements.</p>
 	<p>Example: &lt;img&gt; element</p>
-	<p>&lt;img
+	<pre class="input"><code>
+		&lt;img
 		src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
 		alt="Firefox icon" /&gt;
-	</p>
+	</code></pre>
 	
 	<p>Void elements are:</p>
-	<pre>
+	<pre class="output"><code>
 		&lt;area&gt;
 		&lt;base&gt;
 		&lt;br&gt;
@@ -71,7 +72,7 @@
 		&lt;source&gt;
 		&lt;track&gt;
 		&lt;wbr&gt;
-	</pre>
+	</code></pre>
 
 	<h3>Attributes:</h3>
 	<p>Attributes contain extra information about the element that won't appear in the content.</p>
@@ -83,7 +84,7 @@
 	</ul>
 
 	<p>Example: "class" "href" "title" "target"</p>
-	<pre><strong>&lt;p class="test"&gt;</strong>The quick brown fox jumps over the lazy dog.<strong>&lt;/p&gt;</strong></pre>
+	<code class="input"><strong>&lt;p class="test"&gt;</strong>The quick brown fox jumps over the lazy dog.<strong>&lt;/p&gt;</strong></code>
 	
 </body>
 

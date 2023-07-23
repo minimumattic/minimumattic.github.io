@@ -9,20 +9,20 @@
 <body>
 <h1>HTML - Marking up computer code</h1>
 <ul>
-    <li><code>&lt;code&gt;</code>: For marking up generic pieces of computer code.</li>
-    <li><code>&lt;pre&gt;</code>: For retaining whitespace (generally code blocks) — if you use indentation or excess whitespace inside your text, browsers will ignore it and you will not see it on your rendered page. If you wrap the text in &lt;pre&gt;&lt;/pre&gt; tags however, your whitespace will be rendered identically to how you see it in your text editor.</li>
+    <li><code>&lt;code&gt;</code>: For marking up generic pieces of computer code.(inline element)</li>
+    <li><code>&lt;pre&gt;</code>: For retaining whitespace (generally code blocks) — if you use indentation or excess whitespace inside your text, browsers will ignore it and you will not see it on your rendered page. If you wrap the text in &lt;pre&gt;&lt;/pre&gt; tags however, your whitespace will be rendered identically to how you see it in your text editor.(Block-level element)</li>
     <li><code>&lt;var&gt;</code>: For specifically marking up variable names.</li>
     <li><code>&lt;kbd&gt;</code>: For marking up keyboard (and other types of) input entered into the computer.</li>
     <li><code>&lt;samp&gt;</code>: For marking up the output of a computer program.</li>
 </ul>
 <h3>- The Inline Code element &lt;code&gt;:</h3>
 <p>
-    The function <code>selectAll()</code> highlights all the text in the input
+    The function <code class="input">selectAll()</code> highlights all the text in the input
     field so the user can, for example, copy or delete the text.
   </p>
   </p>
   <h3>- The Preformatted Text element &lt;pre&gt;:</h3>
-  <pre>
+  <pre class="output">
       L          TE
         A       A
           C    V
@@ -41,7 +41,7 @@
                 RER       - Apollinaire
     </pre>
     <p>pre + code: preformatted code:</p>
-    <pre><code>
+    <pre class="output"><code>
         L          TE
           A       A
             C    V
@@ -65,6 +65,6 @@
 <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
 <h3>- The Sample Output element &lt;samp&gt;:</h3>
 <p>I was trying to boot my computer, but I got this hilarious message:</p>
-<p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+<p><samp class="input">Keyboard not found <br>Press F1 to continue</samp></p>
 </body>
 </html>

@@ -1,4 +1,13 @@
 h1 {
-    color: red;
+  color: red;
   }
   
+li {
+  list-style-type: none;
+  }
+
+pre {
+  background-color: yellow;
+  width: 600px;
+  padding: 5px;
+}

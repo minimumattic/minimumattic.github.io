@@ -1979,8 +1979,6 @@ td.blueColor15 {
 /* Phosphor Color Codes */
 
 table.phosphor {
-    font-family: 'DejaVu Sans';
-    font-size: 9pt;
     border-collapse: collapse;
     border: none;
     background-color: rgb(40,40,40);

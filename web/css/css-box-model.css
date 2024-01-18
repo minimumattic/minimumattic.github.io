@@ -13,8 +13,14 @@
 }
 
 body {
-    background-color: aqua;
+    background-color: gray;
 }
+
+.box-1, .box-2 {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	}
 
 .box-1 {
     margin: 50px;
@@ -34,8 +40,17 @@ body {
     height: 200px;
 }
 
+/* set text inside <div> in center and middle of the box */
 div {
 	text-align: center;
 	vertical-align: middle;
 	line-height: 200px;
+	}
+
+img {
+	float: right;
+	}
+	
+figcaption {
+	font-size: 0.5em
 	}

@@ -26,14 +26,15 @@ body {
 table {
     font-family: 'Dejavu Sans Mono';
     border-collapse: collapse;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     margin: 0 0 40px 0px;
 }
 
 caption {
+    font-family: 'Dejavu Sans';
     text-align: left;
-    margin: 0 0 10px 0;
-    font-size: 1em;
+    margin: 10px 0 10px 0;
+    font-size: 1.2em;
     font-style: normal;
     font-weight: bold;
 }
@@ -46,6 +47,15 @@ td, th {
 
 td {
     text-align: center;
+}
+
+figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+img {
+    margin: 10px 0 10px 0;
 }
 
 /* Default (White on Black) colors */
@@ -1962,40 +1972,31 @@ td.blueColor15 {
 
 /* Phosphor Color Codes */
 
-.container-phosphor {
-    display: flex;
-    flex-direction: column;
-    background: #282828;
-    padding: 10px;
-    margin: 0 0 20px 20px;
-    width: 920px;
-    height: 450px;
-}
-
 table.phosphor {
     font-family: 'DejaVu Sans';
     font-size: 9pt;
-    margin: 10px 40px 10px 40px;
     border-collapse: collapse;
     border: none;
+    background-color: black;
 }
 
 td.title {
     border: none;
-    padding: 10px 20px;
     text-align: right;
+    width: 200px;
 }
 
 td.content {
     border: none;
-    padding: 10px 20px;
     text-align: right;
+    padding: 10px 20px 10px 0;
+    width: 320px;
 }
 
 td.rgb {
     border: none;
-    padding: 10px 20px;
     text-align: left;
+    width: 270px;
 }
 
 tr.amber {

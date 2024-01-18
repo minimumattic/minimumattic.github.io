@@ -1991,8 +1991,15 @@ td.title {
 
 td.content {
     border: none;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    width: 320px;
+}
+
+td.content-back {
+    border: none;
     text-align: right;
-    padding: 10px 20px 10px 0;
+    padding: 10px 20px 10px 20px;
     width: 320px;
 }
 

@@ -2,7 +2,7 @@
 @font-face {
 	font-family: 'DejaVu Sans';
 	src: url('/fonts/DejaVuSans.woff2') format('woff2'),
-	url('/fonts/DejaVuSans.woff') format('woff');
+		url('/fonts/DejaVuSans.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -11,14 +11,17 @@
 @font-face {
 	font-family: 'DejaVu Sans Mono';
 	src: url('/fonts/DejaVuSansMono.woff2') format('woff2'),
-	url('/fonts/DejaVuSansMono.woff') format('woff');
+		url('/fonts/DejaVuSansMono.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
+
 /* #################################### */
 
-* { box-sizing: border-box; }
+* {
+	box-sizing: border-box;
+}
 
 body {
 	display: flex;
@@ -26,14 +29,17 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #D7F5EF;
-	min-height: 100vh;	/* use max height of the page */
+	min-height: 100vh;
+	/* use max height of the page */
 }
 
 /* main, article, aside, section, header, footer {
 	font-size: 0.9rem;
 } */
 
-header, main, footer {
+header,
+main,
+footer {
 	flex-shrink: 1;
 }
 
@@ -57,7 +63,8 @@ header, main, footer {
 	border-right-style: dashed;
 	border-width: 1px;
 	padding: 0 10px 50px 10px;
-	flex-grow: 1;	/* let main content grow to end bottom before footer */
+	flex-grow: 1;
+	/* let main content grow to end bottom before footer */
 	flex-shrink: 1;
 }
 
@@ -138,6 +145,7 @@ ul.nav-listing {
 	margin-left: 0;
 	padding-left: 0;
 }
+
 /* ######################## */
 
 
@@ -145,13 +153,15 @@ ul.nav-listing {
 	margin-right: 7px;
 }
 
-.nav, .post {
+.nav,
+.post {
 	text-decoration-line: underline;
 	text-decoration-color: #AFECE0;
 	text-decoration-thickness: 5px;
 }
 
-.nav:hover, .post:hover {
+.nav:hover,
+.post:hover {
 	background-color: #AFECE0;
 	padding: 5px 0 5px 0;
 }
@@ -209,7 +219,7 @@ pre {
 	text-decoration-line: underline;
 	font-weight: bold;
 	margin: 5px;
-	
+
 }
 
 code.input {
@@ -217,7 +227,7 @@ code.input {
 	border-style: none;
 	border-radius: 0;
 	padding: 0 2px 0 2px;
-	}
+}
 
 ul {
 	list-style-type: "> ";

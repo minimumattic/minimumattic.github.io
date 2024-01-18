@@ -1981,7 +1981,7 @@ table.phosphor {
     font-size: 9pt;
     border-collapse: collapse;
     border: none;
-    background-color: black;
+    background-color: rgb(40, 40, 40);
 }
 
 td.title {

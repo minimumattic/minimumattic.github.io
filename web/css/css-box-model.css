@@ -19,7 +19,7 @@ body {
 .box-1 {
     margin: 50px;
     border: 10px solid red;
-    padding: 30px;
+    padding: 50px;
     background-color: orange;
     width: 200px;
     height: 200px;
@@ -28,21 +28,14 @@ body {
 .box-2 {
     margin: 50px;
     border: 10px solid red;
-    padding: 30px;
+    padding: 50px;
     background-color: greenyellow;
     width: 200px;
     height: 200px;
 }
 
 div {
-    text-align: center;
-}
-
-h1 {
-    background-color: fuchsia;
-    border: 2px solid black;
-    width: 400px;
-    height: 50px;
-    text-align: center;
-    padding: 10px;
-}
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	}

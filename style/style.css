@@ -156,26 +156,29 @@ ul.nav-listing {
 .nav,
 .post {
 	text-decoration-line: underline;
-	text-decoration-color: #AFECE0;
+	text-decoration-style: solid;
+	text-decoration-color: yellow; /* #AFECE0 */
 	text-decoration-thickness: 5px;
+	text-underline-offset: 5px;
 }
 
 .nav:hover,
 .post:hover {
-	background-color: #AFECE0;
-	padding: 5px 0 5px 0;
+	background-color: yellow; /* #AFECE0 */
+	padding: 3px 0 3px 0;
 }
 
 .odin {
 	margin-right: 7px;
 	text-decoration-line: underline;
-	text-decoration-color: yellow;
+	text-decoration-color: red;
 	text-decoration-thickness: 5px;
+	text-underline-offset: 5px;
 }
 
 .odin:hover {
-	background-color: yellow;
-	padding: 5px 0 5px 0;
+	background-color: red;
+	padding: 3px 0 3px 0;
 }
 
 .input {

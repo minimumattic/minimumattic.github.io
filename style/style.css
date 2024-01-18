@@ -50,6 +50,11 @@ h1::first-letter {
 	font-style: italic;
 }
 
+img.computer {
+	float: left;
+	margin: 10px;
+}
+
 /* containers flexbox */
 
 .flex-nav {

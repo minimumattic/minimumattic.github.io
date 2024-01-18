@@ -43,6 +43,13 @@ footer {
 	flex-shrink: 1;
 }
 
+h1::first-letter {
+	color: white;
+	background-color: black;
+	padding: 0 5px 0 5px;
+	font-style: italic;
+}
+
 /* containers flexbox */
 
 .flex-nav {

@@ -40,7 +40,7 @@ caption {
 }
 
 td, th {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0,0,0);
     width: 120px;
     padding: 5px;
 }
@@ -1981,7 +1981,7 @@ table.phosphor {
     font-size: 9pt;
     border-collapse: collapse;
     border: none;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(40,40,40);
 }
 
 td.title {

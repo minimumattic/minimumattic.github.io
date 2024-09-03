@@ -1,21 +1,25 @@
 * {
-	box-sizing: border-box;
-	border: 1px solid blue;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
-	margin: 0;
+	margin: 0 100px 0 100px;
 	padding: 0;
 	background: #fff;	/* #D7F5EF */
 	min-height: 100vh;
 	/* use max height of the page */
-}
 
 /* main, article, aside, section, header, footer {
 	font-size: 0.9rem;
 } */
+
+    /* notebook paper horizontal line pattern
+	background-color: #fff;
+	background-image: linear-gradient(90deg, transparent 79px, #ff0000 79px, #ff0000 81px, transparent 81px), linear-gradient(#4169e1 .01em, transparent .1em);
+	background-size: 100% 1.2em;
+	*/
+}
 
 header,
 main,

@@ -133,93 +133,93 @@ td.defaultColor15 {
     color: #000;
 }
 
-/* VGA colors */
-td.vgaBackground {
+/* CGA colors */
+td.cgaBackground {
     background: #000000;
     color: #fff;
 }
 
-td.vgaForeground {
-    background: #aaaaaa;
+td.cgaForeground {
+    background: #ffffff;
     color: #000;
 }
 
-td.vgaColor0 {
+td.cgaColor0 {
     background: #000000;
     color: #fff;
 }
 
-td.vgaColor1 {
-    background: #aa0000;
-    color: #fff;
-}
-
-td.vgaColor2 {
-    background: #00aa00;
-    color: #fff;
-}
-
-td.vgaColor3 {
-    background: #aa5500;
-    color: #fff;
-}
-
-td.vgaColor4 {
+td.cgaColor1 {
     background: #0000aa;
     color: #fff;
 }
 
-td.vgaColor5 {
-    background: #aa00aa;
+td.cgaColor2 {
+    background: #00aa00;
     color: #fff;
 }
 
-td.vgaColor6 {
+td.cgaColor3 {
     background: #00aaaa;
     color: #fff;
 }
 
-td.vgaColor7 {
+td.cgaColor4 {
+    background: #aa0000;
+    color: #fff;
+}
+
+td.cgaColor5 {
+    background: #aa00aa;
+    color: #fff;
+}
+
+td.cgaColor6 {
+    background: #aa5500;
+    color: #fff;
+}
+
+td.cgaColor7 {
     background: #aaaaaa;
     color: #000;
 }
 
-td.vgaColor8 {
+td.cgaColor8 {
     background: #555555;
     color: #fff;
 }
 
-td.vgaColor9 {
-    background: #ff5555;
-    color: #fff;
-}
-
-td.vgaColor10 {
-    background: #55ff55;
-    color: #000;
-}
-
-td.vgaColor11 {
-    background: #ffff55;
-    color: #000;
-}
-
-td.vgaColor12 {
+td.cgaColor9 {
     background: #5555ff;
     color: #fff;
 }
 
-td.vgaColor13 {
-    background: #ff55ff;
+td.cgaColor10 {
+    background: #55ff55;
     color: #000;
 }
 
-td.vgaColor14 {
+td.cgaColor11 {
     background: #55ffff;
     color: #000;
 }
 
-td.vgaColor15 {
+td.cgaColor12 {
+    background: #ff5555;
+    color: #fff;
+}
+
+td.cgaColor13 {
+    background: #ff55ff;
+    color: #000;
+}
+
+td.cgaColor14 {
+    background: #ffff55;
+    color: #000;
+}
+
+td.cgaColor15 {
     background: #ffffff;
     color: #000;
 }
